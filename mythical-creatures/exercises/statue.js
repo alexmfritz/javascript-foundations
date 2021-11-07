@@ -1,6 +1,8 @@
+
+
 class Statue {
-  constructor(name) {
-    this.name = name;
+  constructor(person) {
+    this.name = person;
   }
 }
 
