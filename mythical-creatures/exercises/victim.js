@@ -1,11 +1,11 @@
 
+
 class Victim {
-  constructor(name) {
-    this.name = name;
+  constructor(victim) {
+    this.name = victim;
     this.alive = true;
   }
 }
-
 
 
 
