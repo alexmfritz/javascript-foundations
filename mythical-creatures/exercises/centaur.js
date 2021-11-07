@@ -1,12 +1,12 @@
 
 class Centaur {
-  constructor(name) {
-    this.name = name || name.name;
-    this.breed = name.type;
-    this.standing = true;
-    this.count = 0;
+  constructor(centaur) {
+    this.name = centaur;
+    this.breed = centaur.type;
     this.cranky = false;
+    this.standing = true;
     this.layingDown = false;
+    this.count = 0;
   }
   shootBow() {
     this.count++;
@@ -16,10 +16,8 @@ class Centaur {
       return `NO!`;
     } else if (this.count === 3) {
       this.cranky = true;
-      return `Twang!!!`;
-    } else if (this.count < 3) {
-      return `Twang!!!`;
     }
+    return `Twang!!!`;
   }
   run() {
     this.count++;
@@ -29,35 +27,31 @@ class Centaur {
       return `NO!`;
     } else if (this.count === 3) {
       this.cranky = true;
-      return `Clop clop clop clop!!!`;
-    } else if (this.count < 3) {
-      return `Clop clop clop clop!!!`;
     }
+    return `Clop clop clop clop!!!`;
   }
   sleep() {
     if (this.standing === true) {
       return `NO!`;
-    } else if (this.standing === false) {
-      this.cranky = false;
-      this.count = 0;
-      return `ZZZZ`;
     }
+    this.cranky = false;
+    this.count = 0;
+    return `ZZZZ`;
   }
   layDown() {
-    this.standing = false;
     this.layingDown = true;
+    this.standing = false;
   }
   standUp() {
     this.standing = true;
     this.layingDown = false;
   }
   drinkPotion() {
-    if (this.standing === true) {
-      this.cranky = false;
-      this.count = 0;
-    } else if (this.standing === false) {
+    if (this.standing === false) {
       return `Not while I'm laying down!`;
     }
+    this.count = 0;
+    this.cranky = false;
   }
 }
 
