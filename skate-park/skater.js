@@ -12,7 +12,7 @@ class Skater {
   practice(trick) {
     if (!this.tricks[trick] && (this.frustration < 2)) {
       this.frustration++;
-    } else if (!this.tricks[trick] && (this.frustration < 3)) {
+    } else if (!this.tricks[trick] && (this.frustration <= 3)) {
       this.frustration = 0;
       this.tricks[trick] = true;
       return `I just learned to ${trick}!!!`
