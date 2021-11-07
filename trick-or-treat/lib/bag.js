@@ -12,13 +12,9 @@ class Bag {
   contains(type) {
     if (type === 'Lindt Chocolate') {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 }
-
-
-
 
 module.exports = Bag;
